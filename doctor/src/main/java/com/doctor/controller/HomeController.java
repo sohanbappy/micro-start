@@ -1,6 +1,7 @@
 package com.doctor.controller;
 
 import com.doctor.model.Doctor;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,5 +24,15 @@ public class HomeController {
     @RequestMapping("/all")
     public List<Doctor> getDoctorList(){
         return doctorList;
+    }
+
+    @RequestMapping("/{Id}")
+    public Doctor findDoctorById(@PathVariable("Id") int Id){
+        Doctor d = doctorList.stream()
+                .filter(doctor -> String.valueOf(Id).equals(String.valueOf(doctor.getId())))
+                .findAny()
+                .orElse(null);
+
+        return d;
     }
 }
