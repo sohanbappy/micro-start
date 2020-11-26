@@ -23,12 +23,12 @@ public class HomeController {
 
     @RequestMapping("/allDoctors")
     public List<Doctor> getAllDoctors(){
-        return restTemplate.getForObject("http://doctor-service/doctor/all", List.class);
+        return restTemplate.getForObject("http://doctor/doctor/all", List.class);
         //return restTemplate.getForObject("http://localhost:8082/doctor/all", List.class);
     }
     @RequestMapping("/getDoctor/{Id}")
     public Doctor getDoctorById(@PathVariable("Id") int Id){
-        return restTemplate.getForObject("http://doctor-service/doctor/"+Id,Doctor.class);
+        return restTemplate.getForObject("http://doctor/doctor/"+Id,Doctor.class);
     }
 
 }
