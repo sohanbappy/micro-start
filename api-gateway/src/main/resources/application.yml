@@ -8,11 +8,11 @@ spring:
           uri: lb://DOCTOR-SERVICE
           predicates:
             - Path=/doctor/**
-          filters:
-            - name: CircuitBreaker
-              args:
-                name: doctor-service
-                fallbackuri: forward:/doctorFallbackResponse
+#          filters:
+#            - name: CircuitBreaker
+#              args:
+#                name: doctor-service
+#                fallbackuri: forward:/doctorFallbackResponse
         - id: patient-service
           uri: lb://PATIENT-SERVICE
           predicates:
