@@ -17,11 +17,11 @@ public class HystrixConfig {
     @Bean
     public HystrixCommand.Setter config() {
         HystrixCommand.Setter config = HystrixCommand.Setter.withGroupKey(HystrixCommandGroupKey.Factory
-                .asKey("rentcloud"));
+                .asKey("appointment"));
         HystrixCommandProperties.Setter commandProperties = HystrixCommandProperties.Setter();
-        String timeout=environment.getProperty("hystrix.timeout");
-        if(timeout==null)
-            timeout="500";
+        String timeout = environment.getProperty("hystrix.timeout");
+        if (timeout == null)
+            timeout = "500";
         commandProperties.withExecutionTimeoutInMilliseconds(Integer.parseInt(timeout));
         config.andCommandPropertiesDefaults(commandProperties);
         return config;
