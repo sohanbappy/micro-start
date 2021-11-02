@@ -8,6 +8,18 @@ spring:
           uri: lb://DOCTOR-SERVICE
           predicates:
             - Path=/doctor/**
+        - id: patient-service
+          uri: lb://PATIENT-SERVICE
+          predicates:
+            - Path=/patient/**
+        - id: admission-service
+          uri: lb://ADMISSION-SERVICE
+          predicates:
+            - Path=/admission/**
+
+#id - used for calling from internal API
+#URI - same as spring-app-name (mandatory)
+#path - indicates @RequestMapping
 
 server:
   port: 8989
@@ -20,5 +32,4 @@ eureka:
     service-url:
       defaultzone: http://localhost:8761/eureka/
   instance:
-    instance-id: ${spring.application.name}-${random.int}
     hostname: localhost
