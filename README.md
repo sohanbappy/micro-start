@@ -9,6 +9,14 @@ Start Up(Microservice) Project Using Java,Spring-boot
 3) Patient
 
 
+### Architechture
+
+* Eureka
+* Gateway
+* Hystrix
+* API (resources)
+* Config Server (later)
+
 
 
 
