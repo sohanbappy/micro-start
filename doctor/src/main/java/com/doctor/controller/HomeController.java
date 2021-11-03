@@ -1,6 +1,8 @@
 package com.doctor.controller;
 
 import com.doctor.model.Doctor;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +12,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/doctor")
+@RefreshScope
+@EnableAutoConfiguration
 public class HomeController {
 
     private List<Doctor> doctorList = Arrays.asList(

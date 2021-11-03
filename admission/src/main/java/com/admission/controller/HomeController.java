@@ -2,8 +2,10 @@ package com.admission.controller;
 
 import com.admission.hystrix.CommonHystrixCommand;
 import com.admission.model.Doctor;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,9 +18,12 @@ import java.util.concurrent.Future;
 
 @RestController
 @RequestMapping("/admission")
+@RefreshScope
+@EnableAutoConfiguration
 public class HomeController {
 
     @Autowired
+    @Lazy
     private RestTemplate restTemplate;
 
     @RequestMapping("/home")
