@@ -12,7 +12,7 @@ Start Up(Microservice) Project Using Java,Spring-boot
 * Why Micro-service?
 * Why API-Gateway needed?
 * Fine, But why config-server?
-* Is is necessery to use Hystrix Dashboard?
+* Is it necessery to use Hystrix Dashboard?
 
 ### Architechture
 
