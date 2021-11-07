@@ -1,19 +1,19 @@
 # MicroService-start
-Developing Microservice Project(**Doctor-Appoinment**) Using Spring-boot
+Developing Microservice Project(**Doctor-Appoinment**) Using Spring-boot **[Secured]** using OAuth2
 
 
 ### Simple Modules
 
 1) Admission
 2) Doctor
-3) Patient
+3) Patient (Resource Server)
 
 ### Try to find out Answers
 * Why Micro-service?
 * Why API-Gateway needed?
 * Fine, But why config-server?
 * Is it necessery to use Hystrix Dashboard?
-
+* Is it secured?
 ### Architechture
 
 * Eureka
@@ -22,7 +22,9 @@ Developing Microservice Project(**Doctor-Appoinment**) Using Spring-boot
 * Hystrix-Dashboard
 * API (resources)
 * Config Server
+* **Authorization server and Resource server**
 
+###OAuth2 used Authorization-Resource server (view jdbc token store)
 
 ***Perdon me for mistakes(if any)
 
