@@ -6,3 +6,10 @@ spring:
   application:
     name: PATIENT-SERVICE
 
+security:
+  oauth2:
+    resource:
+      token-info-uri: http://localhost:9292/oauth/check_token
+    client:
+      client-id: appointment
+      client-secret: bappy
