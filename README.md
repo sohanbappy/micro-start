@@ -24,7 +24,7 @@ Developing Microservice Project(**Doctor-Appoinment**) Using Spring-boot **[Secu
 * Config Server
 * **Authorization server and Resource server**
 
-### OAuth2 used Authorization-Resource server (view jdbc token store)
+### N.B: OAuth2 used Authorization-Resource server (view jdbc token store)
 
 ***Perdon me for mistakes(if any)
 
