@@ -1,0 +1,24 @@
+security:
+  oauth2:
+    client:
+      client-id: appointment
+      client-secret: bappy
+      user-authorization-uri: http://localhost:9292/oauth/authorize
+      access-token-uri: http://localhost:9292/oauth/token
+    resource:
+      token-info-uri: http://localhost:9292/oauth/check_token
+
+#user-authorization-uri - (from DB value -> web_server_redirect_uri (Column) )
+#access-token-uri - Get Token (Authorization Server)
+#token-info-uri - Check Token (Authorization Server)
+#client id,secret (DB Value)
+
+#saving token into Session Var
+server:
+  servlet:
+    session:
+      cookie:
+        name: TokenSESSION
+
+
+
