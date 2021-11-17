@@ -23,6 +23,7 @@ Developing Microservice Project(**Doctor-Appoinment**) Using Spring-boot **[Secu
 * API (resources)
 * Config Server
 * **Authorization server and Resource server**
+* Appointment UI
 
 ### N.B: OAuth2 used Authorization-Resource server (view jdbc token store)
 
