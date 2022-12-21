@@ -40,7 +40,7 @@ Developing Microservice Project(**Doctor-Appoinment**) Using Spring-boot **[Secu
 
 ### Config-server?? What is that??
 * Change EndPoint, Values without making any changes in code..Cool
-* No need to repeat same Comfig for all resources over micro-services
+* No need to repeat same Config for all resources over micro-services
 * Remember (add a repo, add dependencies, point to config-server uri in bootstrap.yml file)
 
 ### Challenges
